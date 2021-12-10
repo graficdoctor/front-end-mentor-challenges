@@ -1,0 +1,187 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* Variables */
+:root {
+  --clr-primary-01: hsl(0, 78%, 62%);
+  --clr-primary-02: hsl(180, 62%, 55%);
+  --clr-primary-03: hsl(34, 97%, 64%);
+  --clr-primary-04: hsl(212, 86%, 64%);
+  --clr-neutral-01: hsl(234, 12%, 34%);
+  --clr-neutral-02: hsl(229, 6%, 66%);
+  --clr-neutral-03: hsl(0, 0%, 98%);
+  --ff-primary-01: 'Poppins', sans-serif;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--clr-neutral-03);
+}
+
+body {
+  font-family: var(--ff-primary-01);
+  font-size: 15px;
+  text-align: center;
+}
+
+h1 {
+  color: var(--clr-neutral-01);
+  font-family: var(--ff-primary-01);
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-bottom: 0.1rem;
+}
+
+h1 strong {
+  font-weight: 600;
+}
+
+p {
+  color: var(--clr-neutral-01);
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+img {
+  width: 3.6rem;
+}
+
+footer {
+  margin-bottom: 1rem;
+}
+
+/* Global Classes */
+.container {
+  margin: 0 auto;
+  padding-top: 5.6rem;
+  width: 90vw;
+}
+
+/* Text Container */
+.text-container {
+  margin: 0 auto;
+  max-width: 20.7rem;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 5px 15px 20px -20px rgba(131, 166, 210, 0.5);
+  height: 14.8rem;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+  max-width: 20.7rem;
+}
+
+.card p {
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.card h2 {
+  color: var(--clr-neutral-01);
+  font-size: 1.25rem;
+}
+
+.card-1 {
+  border-top: 3px solid var(--clr-primary-02);
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.card-2 {
+  border-top: 3px solid var(--clr-primary-01);
+  margin-bottom: 2rem;
+}
+
+.card-3 {
+  border-top: 3px solid var(--clr-primary-03);
+  margin-bottom: 2rem;
+}
+
+.card-4 {
+  border-top: 3px solid var(--clr-primary-04);
+  margin-bottom: 4rem;
+}
+
+.image-card {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.5rem;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 760px) {
+  .card-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'a b'
+      'c d';
+    gap: 2rem;
+  }
+  .card {
+    margin-bottom: 0;
+  }
+  .card-1 {
+    grid-area: a;
+    margin-top: 0;
+  }
+  .card-2 {
+    grid-area: b;
+  }
+  .card-3 {
+    grid-area: c;
+  }
+  .card-4 {
+    grid-area: d;
+  }
+  .text-container {
+    margin-bottom: 4.6rem;
+    max-width: 35rem;
+    width: 50vw;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'a b d'
+      'a c d';
+    margin: 0 auto;
+    max-width: 1110px;
+  }
+  .card-1,
+  .card-4 {
+    align-self: center;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+  img {
+    width: 4.25rem;
+  }
+}
+
+/* Front End Mentor */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
