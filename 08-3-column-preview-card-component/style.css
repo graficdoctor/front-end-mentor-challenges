@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --clr-primary-01: hsl(31, 77%, 52%);
+  --clr-primary-02: hsl(184, 100%, 22%);
+  --clr-primary-03: hsl(179, 100%, 13%);
+  --clr-neutral-01: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+  --clr-neutral-02: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+/* General Styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-neutral-02);
+  color: var(--clr-neutral-01);
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 0.938rem;
+}
+
+.container {
+  width: 90%;
+  margin: 2em 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (min-width: 800px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 0;
+    max-height: 500px;
+    max-width: 920px;
+  }
+}
+
+.btn {
+  border-radius: 25px;
+  border: 2px solid transparent;
+  padding: 1em 2em;
+  font-family: inherit;
+  transition: 0.4s;
+  cursor: pointer;
+  background: var(--clr-neutral-02);
+}
+
+.btn:hover,
+.btn:focus {
+  border: 2px solid var(--clr-neutral-02);
+  color: var(--clr-neutral-02);
+}
+
+/* Typography */
+
+h1 {
+  color: var(--clr-neutral-02);
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.5em;
+  max-width: 45ch;
+}
+
+img,
+h1,
+p {
+  margin-bottom: 1.563rem;
+}
+
+/* Cards */
+
+.card {
+  width: 100%;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-01,
+.btn-01:hover,
+.btn-01:focus {
+  background: var(--clr-primary-01);
+}
+
+.btn-01 {
+  color: var(--clr-primary-01);
+}
+
+.card-02,
+.btn-02:hover,
+.btn-02:focus {
+  background: var(--clr-primary-02);
+}
+
+.btn-02 {
+  color: var(--clr-primary-02);
+}
+
+.card-03,
+.btn-03:hover,
+.btn-03:focus {
+  background: var(--clr-primary-03);
+}
+
+.btn-03 {
+  color: var(--clr-primary-03);
+}
+
+/* Footer */
+
+.attribution {
+  color: var(--clr-primary-03);
+  font-size: 11px;
+  text-align: center;
+  margin: 2em 0;
+}
+.attribution a {
+  color: var(--clr-primary-01);
+}
